@@ -21,3 +21,39 @@ code {
   height:900px;
 }
 
+@font-face {
+  font-family: Castro;
+  src: url(CastroScript_PERSONAL_USE_ONLY.ttf);
+}
+
+@font-face {
+  font-family: Mont;
+  src: url(Montserrat-VariableFont_wght.ttf);
+}
+.HeaderContainer{
+  display: flex;
+  flex-direction:row;
+  padding:20px;
+  padding-right:50px;
+  padding-left: 20px;
+  height: 40px;
+  width:auto;
+  background-color: rgba(9, 8, 8, 0.5);
+  justify-content: space-between;
+  color:white;
+}
+
+.HeaderWrapper{
+  display:flex;
+  gap: 20px;
+}
+
+#PortTitle{
+  font-family:Castro;
+  font-size:40px;
+}
+
+.HeaderWrapper span{
+  cursor:pointer;
+  font-family: Mont;
+}
