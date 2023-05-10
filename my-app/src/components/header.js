@@ -13,15 +13,18 @@ export default function Header (){
                 type:"spring",
                 duration: 4,
                 stifness:0,
+                delay:3,
             }
         }
     }
 
     const HeaderVariant = {
+
         end:{
             display:"flex",
             transition:{
-                duration:10,
+                duration:4,
+                delay:3,
             }
         }
     }
