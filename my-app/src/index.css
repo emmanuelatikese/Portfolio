@@ -51,9 +51,11 @@ code {
 #PortTitle{
   font-family:Castro;
   font-size:40px;
+  cursor:pointer;
 }
 
 .HeaderWrapper span{
   cursor:pointer;
   font-family: Mont;
+  font-size:20px;
 }

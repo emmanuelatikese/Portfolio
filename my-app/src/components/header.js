@@ -1,8 +1,8 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import SpanList from './spanList'
 
 export default function Header (){
-
     const TitleVariant = {
         initial:{
             y:-100
@@ -17,7 +17,6 @@ export default function Header (){
             }
         }
     }
-
     const HeaderVariant = {
 
         end:{
@@ -40,30 +39,22 @@ export default function Header (){
                 variants={TitleVariant}
                 initial="initial"
                 animate="end"
+
+                whileHover={
+                    {
+                        color: 'lightblue',
+                        scale:1.05,
+                    }
+                }
             
             id='PortTitle'>Snr.Ati</motion.span>
 
             <div className='HeaderWrapper'>
-                <motion.span
-                variants={TitleVariant}
-                animate="end"
-                initial="initial">Home</motion.span>
-                <motion.span
-                variants={TitleVariant}
-                animate="end"
-                initial="initial">About</motion.span>
-                <motion.span
-                variants={TitleVariant}
-                animate="end"
-                initial="initial">Service</motion.span>
-                <motion.span
-                variants={TitleVariant}
-                animate="end"
-                initial="initial">Skills</motion.span>
-                <motion.span
-                variants={TitleVariant}
-                animate="end"
-                initial="initial">Contact</motion.span>
+                <SpanList ListName="Home" />
+                <SpanList ListName="About"/>
+                <SpanList ListName="Service"/>
+                <SpanList ListName="Skill"/>
+                <SpanList ListName="Contact"/>
             </div>
 
 
