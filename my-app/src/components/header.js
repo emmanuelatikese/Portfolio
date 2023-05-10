@@ -1,21 +1,69 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 export default function Header (){
 
+    const TitleVariant = {
+        initial:{
+            y:-100
+        },
+        end:{
+            y:0,
+            transition:{
+                type:"spring",
+                duration: 4,
+                stifness:0,
+            }
+        }
+    }
+
+    const HeaderVariant = {
+        end:{
+            display:"flex",
+            transition:{
+                duration:10,
+            }
+        }
+    }
+
+
     return (
 
-        <div className='HeaderContainer'>
-            <span id='PortTitle'>Snr.Ati</span>
+        <motion.div 
+            variants={HeaderVariant}
+            animate="end"
+        className='HeaderContainer'>
+            <motion.span 
+                variants={TitleVariant}
+                initial="initial"
+                animate="end"
+            
+            id='PortTitle'>Snr.Ati</motion.span>
 
             <div className='HeaderWrapper'>
-                <span>Home</span>
-                <span>About</span>
-                <span>Service</span>
-                <span>Skills</span>
-                <span>Contact</span>
+                <motion.span
+                variants={TitleVariant}
+                animate="end"
+                initial="initial">Home</motion.span>
+                <motion.span
+                variants={TitleVariant}
+                animate="end"
+                initial="initial">About</motion.span>
+                <motion.span
+                variants={TitleVariant}
+                animate="end"
+                initial="initial">Service</motion.span>
+                <motion.span
+                variants={TitleVariant}
+                animate="end"
+                initial="initial">Skills</motion.span>
+                <motion.span
+                variants={TitleVariant}
+                animate="end"
+                initial="initial">Contact</motion.span>
             </div>
 
 
-        </div>
+        </motion.div>
     )
 }
