@@ -1,5 +1,5 @@
 import React  from "react";
-import {motion} from "framer-motion"
+import {motion, useAnimation} from "framer-motion"
 
 export default function SpanList(props){
     const TitleVariant = {
@@ -17,28 +17,70 @@ export default function SpanList(props){
             }
         }
     }
+    const control = useAnimation()
 
+    
 
     return(
-        <motion.span
+        <div>
+            <motion.span
                 variants={TitleVariant}
                 animate="end"
                 initial="initial"
+
+                onMouseEnter={()=>{
+                  control.start({
+                    width:"auto",
+                    transition:{
+                        type:"tween",
+                        duration:0.5,
+                        stifness:1000,
+                        
+                        
+                    }
+                })  
+                }}
+
+                onMouseLeave={()=>{
+                    control.start({
+                        marginTop:0,
+                        border:'3px solid lightblue',
+                        borderRadius: '3px',
+                        width:'1px'
+                    })
+                    
+                }}
+
+                onClick={()=>{
+                    control.start({
+                        marginTop:0,
+                        border:'3px solid lightblue',
+                        borderRadius: '3px',
+                        width:'1px',
+                        transition:{
+                            duration:0.3,
+                        }
+                    })
+                }}
                 
                 whileHover={{
                     scale: 1.1,
-                    transition: { ease: 'easeOut', duration: 0.3 },
-                        textDecorationLine: 'underline',
-                        textDecorationColor: 'lightblue',
-                        textDecorationThickness: '2px',
-                        textDecorationStyle: 'solid',
-                        borderRadius: '2px',
-
                   }}
-                  
+                whileTap={{
+                    color:'lightblue',
+                    transition:{
+                        duration:0.4,
+                        ease:"easeInOut"
+                    }
+
+                }}
                 >
                     {props.ListName}
         </motion.span>
+        <motion.hr 
+            animate={control}
+            />
+        </div>
                 
     )
 }
