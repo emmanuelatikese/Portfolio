@@ -67,3 +67,33 @@ hr{
   width:1px;
 
 }
+
+.IntroContainer{
+  font-family:Mont;
+  margin-top:300px;
+  margin-left:90px;
+  color:white;
+  display:none;
+
+}
+
+
+#Intro-1{
+  font-size:30px;
+  letter-spacing: 2px;
+}
+#Intro-2{
+  font-family: Mont;
+
+}
+
+#ResumeBtn{
+  border: 1px solid white;
+  padding:12px;
+  border-radius:25px;
+  width:fit-content;
+  color:white;
+  font-size: 16px;
+  letter-spacing: 3px;
+  cursor:pointer;
+}

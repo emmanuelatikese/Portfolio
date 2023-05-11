@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header';
 import {motion} from 'framer-motion'
+import Intro from './components/Intro';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       y:0,
       transition:{
         type:"spring",
-        duration:3,
+        duration:2,
         stifness:1000,
 
       }
@@ -20,13 +21,16 @@ function App() {
   }
 
   return (
+    <div>
     <motion.div 
       variants={ImgVariant}
       animate="end"
       initial="initial"
     className="App">
       <Header/>
+      <Intro/>
     </motion.div>
+    </div>
   );
 }
 
