@@ -12,7 +12,7 @@ export default function Header (){
             transition:{
                 type:"spring",
                 duration: 4,
-                stifness:0,
+                bounce:0.1,
                 delay:3,
             }
         }

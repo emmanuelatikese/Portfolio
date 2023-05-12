@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/header';
 import {motion} from 'framer-motion'
 import Intro from './components/Intro';
+import About from './components/about'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='AppContainer'>
     <motion.div 
       variants={ImgVariant}
       animate="end"
@@ -30,6 +31,7 @@ function App() {
       <Header/>
       <Intro/>
     </motion.div>
+    <About/>
     </div>
   );
 }
