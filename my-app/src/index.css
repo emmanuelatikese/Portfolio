@@ -64,7 +64,7 @@ code {
   font-size:20px;
 }
 
-hr{
+.hr-span{
   margin-top:0;
   border: 3px solid lightblue;
   border-radius: 3px;
@@ -134,3 +134,52 @@ h1{
   margin-top:0;
 }
 
+.AboutTitle{
+  font-size: 30px;
+  color:white;
+  text-align:center;
+  
+}
+
+.About-hr{
+  margin-top: -22px;
+  border-radius: 2px;
+  border: 3px solid lightblue;
+  width:5px;
+}
+
+h2{
+  color: white;
+  text-align:center;
+}
+
+.verge{
+  font-family:Castro;
+  margin-right:auto;
+  margin-left:auto;
+  color:white;
+  font-size: 35px;
+}
+
+
+.circle{
+  width: 100px;
+  height:100px;
+  background:white;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 50px;
+}
+
+.EyeContainer{
+  display:flex;
+  flex-direction:row;
+  gap:5px;
+  width:5px;
+  height:5px;
+  border: 2px solid black;
+}
+
+.leftEye{
+  border
+}

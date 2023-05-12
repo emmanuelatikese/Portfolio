@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/header';
 import {motion} from 'framer-motion'
 import Intro from './components/Intro';
-import About from './components/about'
+import About from './components/about';
 
 
 function App() {

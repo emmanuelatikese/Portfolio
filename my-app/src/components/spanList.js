@@ -35,8 +35,6 @@ export default function SpanList(props){
                         type:"tween",
                         duration:0.5,
                         stifness:1000,
-                        
-                        
                     }
                 })  
                 }}
@@ -79,6 +77,7 @@ export default function SpanList(props){
         </motion.span>
         <motion.hr 
             animate={control}
+            className="hr-span"
             />
         </div>
                 
