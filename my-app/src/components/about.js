@@ -5,7 +5,7 @@ import {useInView} from 'react-intersection-observer'
 
 export default function About(){
 
-    const [hiset, setHiset] = useState(true)
+
 
     const control = useAnimation()
     const {ref, inView} = useInView({
@@ -14,6 +14,7 @@ export default function About(){
 
     const AboutVariant = useAnimation()
     const HrVariant = useAnimation()
+    const AbContent = useAnimation()
 
 
     useEffect(()=>{
@@ -35,12 +36,21 @@ export default function About(){
                 console.log('the inView is ', inView)
 
                 HrVariant.start({
-                    width:'60px',
+                    width:'120px',
                     transition:{
                         duration:0.5
                     }
                 })
 
+                AbContent.start({
+                    y:0,
+                    transition:{
+                        duration:0.5,
+                    },
+                    display:'flex',
+                    marginRight:'auto',
+                    marginLeft:'auto',
+                })
 
         }
         
@@ -54,13 +64,21 @@ export default function About(){
                 width:'1px',
                
             })
+            AbContent.start({
+                y:90,
+                display:'none',
+            })
+
         }
+
 
         
         }
     
         
     ,[inView])
+
+
 
     return(
         <div  
@@ -82,23 +100,22 @@ export default function About(){
         <div className="AboutWrapper">
 
 
-        { hiset ? <h2>Hi</h2> :<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="white" />
-            <circle cx="35" cy="40" r="5" fill="black" class="blink" />
-            <circle cx="65" cy="40" r="5" fill="black" class="blink" />
-            <path d="M30 60 Q 50 80 70 60" stroke="black" fill="transparent" stroke-width="3" />
-            </svg>}
+          <motion.h2
+                animate={AbContent}
+            >Hi</motion.h2>
             
 
             
         
-        <p className="AboutContent">
+        <motion.p 
+            animate={AbContent}
+        className="AboutContent">
         I'm a software developer with two years of experience in creating innovative and user-friendly solutions for various domains. 
         I have a passion for learning new technologies and applying them to solve real-world problems. 
         I enjoy working in a team as well as independently, and I always strive to deliver high-quality code that meets the client's requirements and expectations.
         I'm always eager to take on new challenges and expand my skillset.
         If you are looking for a software developer who can bring value to your project, please feel free to contact me.
-        </p>
+        </motion.p>
 
         <p className='verge'>Vergee</p>
 
