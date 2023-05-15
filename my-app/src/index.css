@@ -95,7 +95,8 @@ code {
   border: 1px solid white;
   padding:12px;
   border-radius:25px;
-  width:fit-content;
+  width:80px;
+  height: 20px;
   color:white;
   font-size: 16px;
   letter-spacing: 3px;
@@ -103,6 +104,7 @@ code {
   padding-right: 20px;
   padding-left: 20px;
 }
+
 
 h1{
   color: white;
@@ -127,11 +129,11 @@ h1{
   font-family:Mont;
   padding:20px;
   width:60%;
-  margin-left: auto;
-  margin-right:auto;
+  text-align: center;
+
+  
 }
 .AboutContainer, .Service-container{
-  background-color: black;
   margin-top:0;
   padding:50px;
 }
@@ -183,6 +185,4 @@ h2{
   height:5px;
   border: 2px solid black;
 }
-
-
 

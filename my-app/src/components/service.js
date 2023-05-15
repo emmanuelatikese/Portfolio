@@ -6,6 +6,7 @@ export default function Service(){
 
     const AboutVariant = useAnimation()
     const HrVariant = useAnimation()
+
     const {ref, inView} = useInView()
 
 
@@ -13,7 +14,7 @@ export default function Service(){
         if(inView){
             AboutVariant.start(
                 {
-                    backgroundColor:'black',
+                    backgroundColor:'#130f40',
                     display:'flex',
                     justifyContent:'center',
                     transition:{
@@ -31,8 +32,6 @@ export default function Service(){
                         duration:0.5
                     }
                 })
-
-                
 
         }
         
@@ -57,13 +56,13 @@ export default function Service(){
         
     ,[inView])
     return (
-        <div 
+        <motion.div 
             ref={ref}
-        className='Service-container'>
-
+            style={{backgroundColor: inView ?'#130f40': 'black'}}
+            className='Service-container'>
         <motion.p 
-            
             animate={AboutVariant}
+            
             className='AboutTitle'>
             Service
          </motion.p>
@@ -74,6 +73,6 @@ export default function Service(){
 
 
         
-        </div>
+        </motion.div>
     )
 }

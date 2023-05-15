@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {motion, useAnimation, useMotionValue, useTransform} from 'framer-motion';
+import React, { useEffect} from 'react'
+import {motion, useAnimation} from 'framer-motion';
 import {useInView} from 'react-intersection-observer'
 
 
@@ -7,7 +7,7 @@ export default function About(){
 
 
 
-    const control = useAnimation()
+
     const {ref, inView} = useInView({
         
     })
