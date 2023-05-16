@@ -68,7 +68,7 @@ export default function Service(){
             y:0,
             display:'flex',
             transition:{
-                duration:0.5,
+                duration:0.7,
                 delay: 1,
             },
         }
