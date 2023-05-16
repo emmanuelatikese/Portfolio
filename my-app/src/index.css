@@ -95,8 +95,7 @@ code {
   border: 1px solid white;
   padding:12px;
   border-radius:25px;
-  width:80px;
-  height: 20px;
+  width:fit-content;
   color:white;
   font-size: 16px;
   letter-spacing: 3px;
@@ -104,7 +103,6 @@ code {
   padding-right: 20px;
   padding-left: 20px;
 }
-
 
 h1{
   color: white;
@@ -129,11 +127,11 @@ h1{
   font-family:Mont;
   padding:20px;
   width:60%;
-  text-align: center;
-
-  
+  margin-left: auto;
+  margin-right:auto;
 }
 .AboutContainer, .Service-container{
+  background-color: black;
   margin-top:0;
   padding:50px;
 }
@@ -186,3 +184,46 @@ h2{
   border: 2px solid black;
 }
 
+.skill-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
+
+.skill-wrapper{
+  background-color: black;
+  width: 300px;
+  height: max-content;
+  padding:20px;
+  border-radius: 8px;
+  border:2px solid lightblue;
+  cursor: pointer;
+  position:relative;
+
+
+}
+
+
+
+.icons-dev{
+  width: 100px;
+  height: 100px;
+  color:white;
+}
+
+@font-face {
+  font-family: Elth;
+  src: url(ELNATH.ttf);
+}
+
+.skill-name{
+  color:white;
+  font-family: Elth;
+  margin-left:8px;
+}
+
+
+.Servicecontent{
+  color:white;
+  display: none;
+}

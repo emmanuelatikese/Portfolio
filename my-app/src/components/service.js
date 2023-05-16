@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import {FaDev} from 'react-icons/fa'
 
 export default function Service(){
 
     const AboutVariant = useAnimation()
     const HrVariant = useAnimation()
-
     const {ref, inView} = useInView()
 
 
@@ -14,7 +14,7 @@ export default function Service(){
         if(inView){
             AboutVariant.start(
                 {
-                    backgroundColor:'#130f40',
+                    backgroundColor:'black',
                     display:'flex',
                     justifyContent:'center',
                     transition:{
@@ -32,6 +32,8 @@ export default function Service(){
                         duration:0.5
                     }
                 })
+
+                
 
         }
         
@@ -56,13 +58,13 @@ export default function Service(){
         
     ,[inView])
     return (
-        <motion.div 
+        <div 
             ref={ref}
-            style={{backgroundColor: inView ?'#130f40': 'black'}}
-            className='Service-container'>
+        className='Service-container'>
+
         <motion.p 
-            animate={AboutVariant}
             
+            animate={AboutVariant}
             className='AboutTitle'>
             Service
          </motion.p>
@@ -71,8 +73,20 @@ export default function Service(){
         animate={HrVariant}
         className='About-hr'/>
 
+        <div className='skill-container'>
+ 
+                <div className='skill-wrapper'>
+                        <FaDev className='icons-dev'/>
 
-        
-        </motion.div>
+                        <p className='skill-name'>Web Development</p>
+                    <motion.p className='Servicecontent'>
+                    Tools use for the backend are Django and nodejs.
+                    Tools use for the frontend are React, Html and Css.
+                     </motion.p>
+                </div>
+                
+
+        </div>
+        </div>
     )
 }
