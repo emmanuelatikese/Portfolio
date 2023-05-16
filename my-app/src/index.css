@@ -193,15 +193,16 @@ h2{
 .skill-wrapper{
   background-color: black;
   width: 300px;
-  height: max-content;
+  height: 100px;
   padding:20px;
   border-radius: 8px;
   border:2px solid lightblue;
   cursor: pointer;
   position:relative;
-
-
+  display: flex;
+  flex-wrap: wrap;
 }
+
 
 
 

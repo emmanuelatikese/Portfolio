@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {FaDev} from 'react-icons/fa'
@@ -57,6 +57,24 @@ export default function Service(){
     
         
     ,[inView])
+
+
+    const skillVariant= {
+        initial:{
+            y:-10,
+            display:'none',
+        },
+        end:{
+            y:0,
+            display:'flex',
+            transition:{
+                duration:0.5,
+                delay: 1,
+            },
+        }
+    }
+
+    const [hovered, setHovered] = useState(false)
     return (
         <div 
             ref={ref}
@@ -75,15 +93,29 @@ export default function Service(){
 
         <div className='skill-container'>
  
-                <div className='skill-wrapper'>
+                <motion.div 
+                
+                    onMouseEnter={()=>setHovered(true)}
+                    onMouseLeave={()=>setHovered(false)}
+                    whileHover={{
+                        height:'200px',
+                        transition:{
+                            duration:1,
+                        }
+                    }}
+                className='skill-wrapper'>
                         <FaDev className='icons-dev'/>
 
                         <p className='skill-name'>Web Development</p>
-                    <motion.p className='Servicecontent'>
+                    <motion.p 
+                    variants={skillVariant}
+                    animate={hovered ? 'end': 'none'}
+                    initial='initial'
+                    className='Servicecontent'>
                     Tools use for the backend are Django and nodejs.
                     Tools use for the frontend are React, Html and Css.
                      </motion.p>
-                </div>
+                </motion.div>
                 
 
         </div>
