@@ -1,14 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import {FaDev} from 'react-icons/fa'
+import {FaDev, } from 'react-icons/fa'
+import {MdDeveloperMode} from "react-icons/md"
+import {GoDeviceDesktop}  from 'react-icons/go'
 
 export default function Service(){
 
     const AboutVariant = useAnimation()
     const HrVariant = useAnimation()
     const {ref, inView} = useInView()
-
+    const [hovered, setHovered] = useState(false)
+    const [mobileHovered , setMobilehovered] = useState(false)
+    const [desktopHovered, setDesktopHovered] = useState(false)
 
     useEffect(()=>{
         if(inView){
@@ -74,7 +78,7 @@ export default function Service(){
         }
     }
 
-    const [hovered, setHovered] = useState(false)
+
     return (
         <div 
             ref={ref}
@@ -91,6 +95,8 @@ export default function Service(){
         animate={HrVariant}
         className='About-hr'/>
 
+        <p className='whatIdo-Wrapper'>What I do?</p>
+
         <div className='skill-container'>
  
                 <motion.div 
@@ -98,15 +104,26 @@ export default function Service(){
                     onMouseEnter={()=>setHovered(true)}
                     onMouseLeave={()=>setHovered(false)}
                     whileHover={{
-                        height:'200px',
+                        height:'218px',
                         transition:{
                             duration:1,
                         }
                     }}
                 className='skill-wrapper'>
-                        <FaDev className='icons-dev'/>
+                    <motion.div 
+                    animate={hovered ? {
+                        flexDirection:'column',
+                        gap:3,
+                        transition:{duration: 2}
+                    }:''}
+                    
+                    className='Icons-Wrapper'
+                    >
+                    <FaDev className='icons-dev'/>
 
-                        <p className='skill-name'>Web Development</p>
+                    <motion.p className='skill-name'>Web Development</motion.p>
+                    </motion.div>
+                        
                     <motion.p 
                     variants={skillVariant}
                     animate={hovered ? 'end': 'none'}
@@ -116,6 +133,64 @@ export default function Service(){
                     Tools use for the frontend are React, Html and Css.
                      </motion.p>
                 </motion.div>
+
+                <motion.div 
+                
+                    onMouseEnter={()=>setMobilehovered(true)}
+                    onMouseLeave={()=>setMobilehovered(false)}
+                    whileHover={{
+                        height:'200px',
+                        transition:{
+                            duration:1,
+                        }
+                    }}
+                className='skill-wrapper'>
+                        <motion.div 
+                    animate={mobileHovered ? {
+                        flexDirection:'column',
+                        gap:3,
+                        transition:{duration: 2}
+                    }:''}
+                    
+                    className='Icons-Wrapper'
+                    >
+                    <MdDeveloperMode className='icons-dev'/>
+
+                    <motion.p className='skill-name'>Mobile Development</motion.p>
+                    </motion.div>
+                    <motion.p 
+                    variants={skillVariant}
+                    animate={mobileHovered ? 'end': 'none'}
+                    initial='initial'
+                    className='Servicecontent'>
+                    Reactnative is the only tool I used for development.
+                     </motion.p>
+                </motion.div>
+
+                     <motion.div 
+                
+                    onMouseEnter={()=>setDesktopHovered(true)}
+                    onMouseLeave={()=>setDesktopHovered(false)}
+                    whileHover={{
+                        height:'200px',
+                        transition:{
+                            duration:1,
+                        }
+                    }}
+                className='skill-wrapper'>
+                        <GoDeviceDesktop className='icons-dev'/>
+
+                    <p className='skill-name'>Mobile Development</p>
+                    <motion.p 
+                    variants={skillVariant}
+                    animate={desktopHovered ? 'end': 'none'}
+                    initial='initial'
+                    className='Servicecontent'>
+                    Electron.js is the only tool I used for development.
+                     </motion.p>
+                </motion.div>
+
+               
                 
 
         </div>
