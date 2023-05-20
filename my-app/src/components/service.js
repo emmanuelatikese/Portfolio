@@ -5,6 +5,7 @@ import {FaDev, } from 'react-icons/fa'
 import {MdDeveloperMode} from "react-icons/md"
 import {GoDeviceDesktop}  from 'react-icons/go'
 
+
 export default function Service(){
 
     const AboutVariant = useAnimation()
@@ -13,6 +14,7 @@ export default function Service(){
     const [hovered, setHovered] = useState(false)
     const [mobileHovered , setMobilehovered] = useState(false)
     const [desktopHovered, setDesktopHovered] = useState(false)
+
 
     useEffect(()=>{
         if(inView){
@@ -95,7 +97,20 @@ export default function Service(){
         animate={HrVariant}
         className='About-hr'/>
 
-        <p className='whatIdo-Wrapper'>What I do?</p>
+        <motion.p 
+        initial={{
+            x: -100,
+        }}
+
+        animate={inView ? {
+            x:0,
+            transition:{
+                type:'tween',
+                duration:1,
+            }
+        }: ''}
+
+        className='whatIdo-Wrapper'>What I do?</motion.p>
 
         <div className='skill-container'>
  
@@ -133,6 +148,7 @@ export default function Service(){
                     Tools use for the frontend are React, Html and Css.
                      </motion.p>
                 </motion.div>
+
 
                 <motion.div 
                 
@@ -178,9 +194,19 @@ export default function Service(){
                         }
                     }}
                 className='skill-wrapper'>
-                        <GoDeviceDesktop className='icons-dev'/>
+                        <motion.div 
+                    animate={desktopHovered ? {
+                        flexDirection:'column',
+                        gap:3,
+                        transition:{duration: 2}
+                    }:''}
+                    
+                    className='Icons-Wrapper'
+                    >
+                    <GoDeviceDesktop className='icons-dev'/>
 
-                    <p className='skill-name'>Mobile Development</p>
+                    <motion.p className='skill-name'>Desktop Development</motion.p>
+                    </motion.div>
                     <motion.p 
                     variants={skillVariant}
                     animate={desktopHovered ? 'end': 'none'}
