@@ -53,7 +53,6 @@ export default function Header (){
                 <SpanList ListName="Home" />
                 <SpanList ListName="About"/>
                 <SpanList ListName="Service"/>
-                <SpanList ListName="Skill"/>
                 <SpanList ListName="Contact"/>
             </div>
 

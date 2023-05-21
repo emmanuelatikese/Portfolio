@@ -57,6 +57,7 @@ export default function SpanList(props){
                         width:'1px',
                         transition:{
                             duration:0.3,
+                            type:"tween"
                         }
                     })
                 }}
@@ -67,8 +68,9 @@ export default function SpanList(props){
                 whileTap={{
                     color:'lightblue',
                     transition:{
+                        type:'tween',
                         duration:0.4,
-                        ease:"easeInOut"
+                        
                     }
 
                 }}
