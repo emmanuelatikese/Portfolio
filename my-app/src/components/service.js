@@ -5,20 +5,22 @@ import {FaDev, } from 'react-icons/fa'
 import {MdDeveloperMode} from "react-icons/md"
 import {GoDeviceDesktop}  from 'react-icons/go'
 import SkillWrapper from './skillWrapper';
+import { IoLogoPython } from "react-icons/io5";
+import {DiJavascript1} from "react-icons/di"
+
+
 
 export default function Service(){
 
     const AboutVariant = useAnimation()
     const HrVariant = useAnimation()
-    const {ref, inView} = useInView({
-        threshold:0.4
-    })
+    const {ref, inView} = useInView()
     const [hovered, setHovered] = useState(false)
     const [mobileHovered , setMobilehovered] = useState(false)
     const [desktopHovered, setDesktopHovered] = useState(false)
     const CardVariant = useAnimation()
 
-    
+    const [hoverPython, setHoverPython] = useState(false)
 
 
     useEffect(()=>{
@@ -134,9 +136,6 @@ export default function Service(){
             hovered={desktopHovered} 
             setHovered={setDesktopHovered} />
 
-                
-
-
         </div>
 
          <motion.p initial={{
@@ -154,6 +153,21 @@ export default function Service(){
         className='whatIdo-Wrapper' id='skillsContainer'>My skills?</motion.p>
 
     <div className='LangContainer'>
+
+        <div 
+        onMouseLeave={()=> setHoverPython(false)}
+        onMouseEnter={()=> setHoverPython(true)}
+        className='LangWrapper'>
+            <IoLogoPython className='LangIcon'/>
+            <motion.p className='LangName' style={hoverPython ? {backgroundColor:'#0984e3', color:'white', transition:"3s"}: ''}>
+                Python
+            </motion.p>
+        </div>
+
+        <div className='LangWrapper'  >
+            <DiJavascript1 className='LangIcon' />
+        </div>
+
 
 
 

@@ -209,19 +209,7 @@ h2{
   
 }
 
-/* .skill-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  transform: scaleY(-1);
-} */
+
 
 
 
@@ -270,6 +258,97 @@ h2{
 
 .Langcontainer{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
+  justify-content: center;
+  width: auto;
+  height: max-content;
   
 }
+
+.LangName{
+  position:absolute;
+  top: 70%;
+  font-family: Elth;
+}
+
+
+.LangWrapper{
+  display: flex;
+  justify-content: center;
+  width:200px;
+  background-color: white;
+  height:200px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: #0984e3;
+  transition: 1s ease-in-out;
+  margin:10px;
+  
+
+}
+
+.LangWrapper:hover {
+  background-color: black;
+}
+
+.LangWrapper .LangIcon{
+  transition:0.2s linear;
+}
+
+.LangWrapper:hover .LangIcon{
+  color:white;
+  transform: scale(1.1);
+}
+
+.LangWrapper::before{
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: -110%;
+  height: 120%;
+  width: 120%;
+  transform: rotate(45deg);
+  background-color: #0984e3;
+  transition: 0.8s;
+  border-radius: 8px;
+}
+
+.LangWrapper:hover:before{
+
+  animation: aaa 0.8s 1;
+  top:-10%;
+  left:-10%;
+}
+
+
+
+.LangIcon{
+  width:100px;
+  height:100px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+
+@keyframes aaa{
+  0%{
+    top: 90%;
+    left: -110%;
+  }
+  50%{
+    top: 90%;
+    left: -110%;
+  }
+  100%{
+    top:-10%;
+    left:-10%;
+  }
+
+}
+
+
+
+
