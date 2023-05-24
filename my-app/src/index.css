@@ -189,6 +189,7 @@ h2{
   flex-direction: row;
   margin-top: 60px;
   justify-content: space-evenly;
+
 }
 
 .skill-wrapper{
@@ -264,7 +265,9 @@ h2{
   width: 900px;
   flex-wrap: wrap;
   padding:10px;
-  
+  margin-left: auto;
+  margin-right: auto;
+  gap:5px;  
 }
 
 .LangName{
@@ -277,7 +280,7 @@ h2{
 
 
 
-.LangWrapper, .LangWrapperJava, .LangWrapperTS {
+.LangWrapper, .LangWrapperJava, .LangWrapperTS, .LangWrapperReact {
   display: flex;
   justify-content: center;
   width:200px;
@@ -293,7 +296,7 @@ h2{
 
 }
 
-.LangWrapper:hover, .LangWrapperJava:hover, .LangWrapperTS:hover {
+.LangWrapper:hover, .LangWrapperJava:hover, .LangWrapperTS:hover, .LangWrapperReact:hover {
   background-color: black;
 }
 
@@ -306,7 +309,7 @@ h2{
   transform: scale(1.1);
 }
 
-.LangWrapper::before, .LangWrapperJava::before, .LangWrapperTS::before{
+.LangWrapper::before, .LangWrapperJava::before, .LangWrapperTS::before, .LangWrapperReact::before{
   content: "";
   position: absolute;
   top: 90%;
@@ -317,7 +320,6 @@ h2{
   background-color: #0984e3;
   transition: 0.8s;
   border-radius: 8px;
-  
 }
 
 
@@ -325,7 +327,7 @@ h2{
 
 /* above is for the python card */
 
-.LangIcon, .LangIconJava, .LangIconTS{
+.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact{
   width:100px;
   height:100px;
   margin-top: auto;
@@ -346,7 +348,7 @@ h2{
 .LangIconJava:hover{
   background-color: #323330;
 }
-.LangWrapper:hover::before, .LangWrapperJava:hover::before, .LangWrapperTS:hover::before{
+.LangWrapper:hover::before, .LangWrapperJava:hover::before, .LangWrapperTS:hover::before, .LangWrapperReact:hover::before{
   animation: aaa 0.8s 1;
   top:-10%;
   left:-10%;
@@ -370,7 +372,7 @@ h2{
 /* above is for the Javascript card */
 
 
-.LangIcon, .LangIconJava, .LangIconTS{
+.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact{
   width:100px;
   height:100px;
   margin-top: auto;
@@ -401,11 +403,35 @@ h2{
 
 }
 
+/* this is the react something */
 
 
+.LangWrapperReact{
+
+  background-color: black;
+  color: #0984e3;
+  border: 1px solid #0984e3;
+
+}
+
+.LangWrapperReact .LangIconReact{
+  transition:0.2s linear;
+}
 
 
+.LangWrapperReact:hover .LangIconReact{
+  color:white;
+  transform: scale(1.1);
+}
 
+.LangWrapperReact::before{
+  background-color: #61DBFB;
+
+}
+
+.LangWrapperReact:hover{
+  border:none;
+}
 
 
 

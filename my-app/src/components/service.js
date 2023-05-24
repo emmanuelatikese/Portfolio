@@ -7,8 +7,9 @@ import {GoDeviceDesktop}  from 'react-icons/go'
 import SkillWrapper from './skillWrapper';
 import { IoLogoPython } from "react-icons/io5";
 import {DiJavascript1} from "react-icons/di";
-import {TbBrandTypescript} from "react-icons/tb"
-import Langs from './lang'
+import {TbBrandTypescript, TbBrandReactNative} from "react-icons/tb"
+import Langs from './lang';
+
 
 
 
@@ -25,6 +26,7 @@ export default function Service(){
     const [hoverPython, setHoverPython] = useState(false);
     const [hoverJS, setHoverJS] = useState(false);
     const [hoverTS, setHoverTS] = useState(false);
+    const [hoverReact, setHoverReact] = useState(false);
 
 
     useEffect(()=>{
@@ -165,8 +167,9 @@ export default function Service(){
         <Langs name="Typescript" ClassName="LangWrapperTS" IconsName="LangIconTS" setHover={setHoverTS} hover={hoverTS} backgroundColor="white" color="#0984e3" Logo={TbBrandTypescript}/>
 
        
+        <Langs name="React.Js" ClassName="LangWrapperReact" IconsName="LangIconReact" setHover={setHoverReact} hover={hoverReact} backgroundColor="#61DBFB" color="white" Logo={FaReact}/>
 
-
+        <Langs name="ReactNative.Js" ClassName="LangWrapperReact" IconsName="LangIconReact" setHover={setHoverReact} hover={hoverReact} backgroundColor="#61DBFB" color="white" Logo={TbBrandReactNative}/>
 
     </div>
 
