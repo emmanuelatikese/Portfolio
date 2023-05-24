@@ -43,7 +43,7 @@ export default function About(){
                 })
 
                 AbContent.start({
-                    y:0,
+                    x:0,
                     transition:{
                         duration:0.5,
                     },
@@ -65,7 +65,7 @@ export default function About(){
                
             })
             AbContent.start({
-                y:90,
+                x:-1000,
                 display:'none',
             })
 

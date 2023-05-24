@@ -256,12 +256,14 @@ h2{
 }
 
 
-.Langcontainer{
+.LangContainer{
   display: flex;
-  flex-direction:row;
-  justify-content: center;
-  width: auto;
-  height: max-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 900px;
+  flex-wrap: wrap;
+  padding:10px;
   
 }
 
@@ -272,7 +274,10 @@ h2{
 }
 
 
-.LangWrapper{
+
+
+
+.LangWrapper, .LangWrapperJava, .LangWrapperTS {
   display: flex;
   justify-content: center;
   width:200px;
@@ -285,11 +290,10 @@ h2{
   color: #0984e3;
   transition: 1s ease-in-out;
   margin:10px;
-  
 
 }
 
-.LangWrapper:hover {
+.LangWrapper:hover, .LangWrapperJava:hover, .LangWrapperTS:hover {
   background-color: black;
 }
 
@@ -302,7 +306,7 @@ h2{
   transform: scale(1.1);
 }
 
-.LangWrapper::before{
+.LangWrapper::before, .LangWrapperJava::before, .LangWrapperTS::before{
   content: "";
   position: absolute;
   top: 90%;
@@ -313,24 +317,97 @@ h2{
   background-color: #0984e3;
   transition: 0.8s;
   border-radius: 8px;
+  
 }
 
-.LangWrapper:hover:before{
 
+
+
+/* above is for the python card */
+
+.LangIcon, .LangIconJava, .LangIconTS{
+  width:100px;
+  height:100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* this is for JavaScript */
+
+.LangWrapperJava{
+
+  background-color: #f0db4f;
+  color: #323330;
+
+}
+
+
+
+.LangIconJava:hover{
+  background-color: #323330;
+}
+.LangWrapper:hover::before, .LangWrapperJava:hover::before, .LangWrapperTS:hover::before{
   animation: aaa 0.8s 1;
   top:-10%;
   left:-10%;
 }
 
 
+.LangWrapperJava .LangIconJava{
+  transition:0.2s linear;
+}
 
-.LangIcon{
+
+.LangWrapperJava:hover .LangIconJava{
+  color:#f0db4f;
+  transform: scale(1.1);
+}
+
+.LangWrapperJava::before{
+  background-color: #323330;
+
+}
+/* above is for the Javascript card */
+
+
+.LangIcon, .LangIconJava, .LangIconTS{
   width:100px;
   height:100px;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+
+
+.LangWrapperTS{
+
+  background-color: #0984e3;
+  color: white;
 
 }
+
+.LangWrapperTS .LangIconTS{
+  transition:0.2s linear;
+}
+
+
+.LangWrapperTS:hover .LangIconTS{
+  color:#0984e3;
+  transform: scale(1.1);
+}
+
+.LangWrapperTS::before{
+  background-color: white;
+
+}
+
+
+
+
+
+
+
+
 
 
 @keyframes aaa{

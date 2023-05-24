@@ -5,11 +5,11 @@ export default function SkillWrapper(props){
     
      const skillVariant= {
         initial:{
-            y:-10,
+            x:-1000,
             display:'none',
         },
         end:{
-            y:0,
+            x:0,
             display:'flex',
             transition:{
                 duration:0.7,

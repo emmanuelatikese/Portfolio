@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import {FaDev, } from 'react-icons/fa'
+import {FaDev, FaReact } from 'react-icons/fa'
 import {MdDeveloperMode} from "react-icons/md"
 import {GoDeviceDesktop}  from 'react-icons/go'
 import SkillWrapper from './skillWrapper';
 import { IoLogoPython } from "react-icons/io5";
-import {DiJavascript1} from "react-icons/di"
+import {DiJavascript1} from "react-icons/di";
+import {TbBrandTypescript} from "react-icons/tb"
+import Langs from './lang'
 
 
 
@@ -20,7 +22,9 @@ export default function Service(){
     const [desktopHovered, setDesktopHovered] = useState(false)
     const CardVariant = useAnimation()
 
-    const [hoverPython, setHoverPython] = useState(false)
+    const [hoverPython, setHoverPython] = useState(false);
+    const [hoverJS, setHoverJS] = useState(false);
+    const [hoverTS, setHoverTS] = useState(false);
 
 
     useEffect(()=>{
@@ -154,20 +158,13 @@ export default function Service(){
 
     <div className='LangContainer'>
 
-        <div 
-        onMouseLeave={()=> setHoverPython(false)}
-        onMouseEnter={()=> setHoverPython(true)}
-        className='LangWrapper'>
-            <IoLogoPython className='LangIcon'/>
-            <motion.p className='LangName' style={hoverPython ? {backgroundColor:'#0984e3', color:'white', transition:"3s"}: ''}>
-                Python
-            </motion.p>
-        </div>
+        <Langs name="python" ClassName="LangWrapper" IconsName="LangIcon" setHover={setHoverPython} hover={hoverPython} backgroundColor="#0984e3" color="white" Logo={IoLogoPython}/>
+       
+        <Langs name="javaScript" ClassName="LangWrapperJava" IconsName="LangIconJava" setHover={setHoverJS} hover={hoverJS} backgroundColor="#323330" color="#f0db4f" Logo={DiJavascript1}/>
+        
+        <Langs name="Typescript" ClassName="LangWrapperTS" IconsName="LangIconTS" setHover={setHoverTS} hover={hoverTS} backgroundColor="white" color="#0984e3" Logo={TbBrandTypescript}/>
 
-        <div className='LangWrapper'  >
-            <DiJavascript1 className='LangIcon' />
-        </div>
-
+       
 
 
 
