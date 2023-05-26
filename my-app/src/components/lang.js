@@ -11,6 +11,6 @@ export default function Langs(props) {
                     <motion.p className='LangName' style={props.hover ? {backgroundColor:props.backgroundColor, color:props.color, transition:"3s"}: ''}>
                         {props.name}
                     </motion.p>
-                </div>
+        </div>
   )
 }

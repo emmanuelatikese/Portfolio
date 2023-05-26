@@ -5,9 +5,10 @@ import {FaDev, FaReact } from 'react-icons/fa'
 import {MdDeveloperMode} from "react-icons/md"
 import {GoDeviceDesktop}  from 'react-icons/go'
 import SkillWrapper from './skillWrapper';
-import { IoLogoPython } from "react-icons/io5";
+import { IoLogoPython,IoLogoHtml5 } from "react-icons/io5";
 import {DiJavascript1} from "react-icons/di";
 import {TbBrandTypescript, TbBrandReactNative} from "react-icons/tb"
+
 import Langs from './lang';
 
 
@@ -26,8 +27,16 @@ export default function Service(){
     const [hoverPython, setHoverPython] = useState(false);
     const [hoverJS, setHoverJS] = useState(false);
     const [hoverTS, setHoverTS] = useState(false);
-    const [hoverReact, setHoverReact] = useState(false);
-
+    const [hoverReact, setHoverReact] = useState(false); 
+    const [hoverRN, setHoverRN] = useState(false);
+    const [hoverHTML, setHoverHTML] = useState(false);
+    const [hoverCss, setHoverCss] = useState(false);
+    const [hoverE, setHoverE] = useState(false);
+    const [hoverMongo, setHoverMongo] = useState(false);
+    const [hoverNode, setHoverNode] = useState(false);
+    const [hoverGit, setHoverGit] = useState(false);
+    const [hoverDjango, setHoverDjango] = useState(false);
+    const [hoverRedis, setHoverRedis] = useState(false);
 
     useEffect(()=>{
         if(inView){
@@ -161,17 +170,13 @@ export default function Service(){
     <div className='LangContainer'>
 
         <Langs name="python" ClassName="LangWrapper" IconsName="LangIcon" setHover={setHoverPython} hover={hoverPython} backgroundColor="#0984e3" color="white" Logo={IoLogoPython}/>
-       
         <Langs name="javaScript" ClassName="LangWrapperJava" IconsName="LangIconJava" setHover={setHoverJS} hover={hoverJS} backgroundColor="#323330" color="#f0db4f" Logo={DiJavascript1}/>
-        
         <Langs name="Typescript" ClassName="LangWrapperTS" IconsName="LangIconTS" setHover={setHoverTS} hover={hoverTS} backgroundColor="white" color="#0984e3" Logo={TbBrandTypescript}/>
-
-       
         <Langs name="React.Js" ClassName="LangWrapperReact" IconsName="LangIconReact" setHover={setHoverReact} hover={hoverReact} backgroundColor="#61DBFB" color="white" Logo={FaReact}/>
-
-        <Langs name="ReactNative.Js" ClassName="LangWrapperReact" IconsName="LangIconReact" setHover={setHoverReact} hover={hoverReact} backgroundColor="#61DBFB" color="white" Logo={TbBrandReactNative}/>
-
-    </div>
+        <Langs name="ReactNative.Js" ClassName="LangWrapperRN" IconsName="LangIconRN" setHover={setHoverRN} hover={hoverRN} backgroundColor="#0984e3" color="white" Logo={TbBrandReactNative}/>
+        <Langs name="html" ClassName="LangWrapperHtml" IconsName="LangIconHtml" setHover={setHoverHTML} hover={hoverHTML} backgroundColor="white" color="#e7592e" Logo={IoLogoHtml5}/>
+    
+        </div>
 
         </div>
     )

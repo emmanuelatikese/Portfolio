@@ -280,7 +280,12 @@ h2{
 
 
 
-.LangWrapper, .LangWrapperJava, .LangWrapperTS, .LangWrapperReact {
+.LangWrapper, 
+.LangWrapperJava, 
+.LangWrapperTS, 
+.LangWrapperReact, 
+.LangWrapperRN,
+.LangWrapperHtml{
   display: flex;
   justify-content: center;
   width:200px;
@@ -296,7 +301,12 @@ h2{
 
 }
 
-.LangWrapper:hover, .LangWrapperJava:hover, .LangWrapperTS:hover, .LangWrapperReact:hover {
+.LangWrapper:hover, 
+.LangWrapperJava:hover, 
+.LangWrapperTS:hover, 
+.LangWrapperReact:hover, 
+.LangWrapperRN:hover,
+.LangWrapperHtml:hover {
   background-color: black;
 }
 
@@ -309,7 +319,12 @@ h2{
   transform: scale(1.1);
 }
 
-.LangWrapper::before, .LangWrapperJava::before, .LangWrapperTS::before, .LangWrapperReact::before{
+.LangWrapper::before, 
+.LangWrapperJava::before, 
+.LangWrapperTS::before, 
+.LangWrapperReact::before, 
+.LangWrapperRN::before,
+.LangWrapperHtml::before {
   content: "";
   position: absolute;
   top: 90%;
@@ -327,7 +342,7 @@ h2{
 
 /* above is for the python card */
 
-.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact{
+.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact, .LangIconRN, .LangIconHtml{
   width:100px;
   height:100px;
   margin-top: auto;
@@ -348,7 +363,12 @@ h2{
 .LangIconJava:hover{
   background-color: #323330;
 }
-.LangWrapper:hover::before, .LangWrapperJava:hover::before, .LangWrapperTS:hover::before, .LangWrapperReact:hover::before{
+.LangWrapper:hover::before,
+ .LangWrapperJava:hover::before, 
+ .LangWrapperTS:hover::before, 
+ .LangWrapperReact:hover::before, 
+ .LangWrapperRN:hover::before,
+ .LangWrapperHtml:hover::before{
   animation: aaa 0.8s 1;
   top:-10%;
   left:-10%;
@@ -372,7 +392,7 @@ h2{
 /* above is for the Javascript card */
 
 
-.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact{
+.LangIcon, .LangIconJava, .LangIconTS, .LangIconReact, .LangIconRN, .LangIconHtml{
   width:100px;
   height:100px;
   margin-top: auto;
@@ -431,6 +451,64 @@ h2{
 
 .LangWrapperReact:hover{
   border:none;
+}
+
+/* this one is for reactnative */
+
+.LangWrapperRN{
+
+  background-color: black;
+  color:#61DBFB;
+  border: 1px solid #61DBFB;
+
+}
+
+.LangWrapperRN:hover{
+  border:none;
+}
+
+.LangWrapperRN .LangIconRN{
+  transition:0.2s linear;
+  color:#61DBFB;
+}
+
+.LangWrapperRN::before{
+  background-color: #0984e3;
+}
+
+.LangWrapperRN:hover .LangIconRN{
+  color:white;
+  transform: scale(1.1);
+}
+
+/* this one is for html card */
+
+.LangWrapperHtml{
+
+  background-color: #e7592e;
+  color:white;
+  
+
+}
+
+
+
+.LangWrapperHtml .LangIconRN{
+  transition:0.2s linear;
+  color:#61DBFB;
+}
+
+.LangWrapperhtml::before{
+  background-color: #e7592e;
+}
+
+.LangWrapperHtml::before{
+  background:white;
+}
+
+.LangWrapperHtml:hover .LangIconHtml{
+  color:#e7592e;
+  transform: scale(1.1);
 }
 
 
