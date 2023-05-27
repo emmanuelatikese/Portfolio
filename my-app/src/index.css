@@ -610,6 +610,7 @@ h2{
   border-radius: 100px;
   opacity: 0;
   transition:1.5s;
+  z-index: -1;
 
 }
 
