@@ -200,15 +200,15 @@ h2{
   height: 100px;
   padding:20px;
   border-radius: 8px;
-  border:2px solid lightblue;
+  border:2px solid #0984e3;
   cursor: pointer;
   position:relative;
   display: flex;
   flex-wrap: wrap;
-  background-image: url('components/Images/ere.jpg');
+  /* background-image: url('components/Images/ere.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); */
   
 }
 
@@ -220,7 +220,7 @@ h2{
 .icons-dev{
   width: 100px;
   height: 100px;
-  color:white;
+  color:#0984e3;
 }
 
 @font-face {
@@ -229,7 +229,7 @@ h2{
 }
 
 .skill-name{
-  color:white;
+  color: #0984e3;
   font-family: Elth;
   margin-left:8px;
   font-size: 15px;
@@ -237,7 +237,7 @@ h2{
 
 
 .Servicecontent{
-  color:white;
+  color:#0984e3;
   display: none;
 }
 
