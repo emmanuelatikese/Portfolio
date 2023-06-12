@@ -97,17 +97,18 @@ export default function Contact(){
         animate={HrVariant}
         className='About-hr'/>
 
-        <div className="ContactWrapper">
+
 
         <form ref={form} onSubmit={sendEmail}>
             
-            <input type="text" name="user_name" placeholder='Fullname' required/>
+            <input type="text" name="user_name" placeholder='Fullname' required autoFocus/>
             
-            <input type="email" name="user_email" placeholder='Email' required/>
+            <input type="email" name="user_email" placeholder='Email' required />
 
+            <input type="number" name="user_contact" placeholder='Phone Number' />
 
             
-            <textarea name="message" />
+            <textarea name="message" placeholder='Description'/>
 
             <input type="submit" value="Send" />
         </form>
@@ -122,6 +123,6 @@ export default function Contact(){
 
         
         
-        </div>
+
     )
 }

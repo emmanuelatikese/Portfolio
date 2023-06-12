@@ -675,3 +675,38 @@ h2{
 .projectBtn:hover::before{
   opacity: 1;
 }
+
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+
+input[type="text"],input[type="email"], input[type="number"]{
+  outline: none;
+  width: 200px;
+  height: 20px;
+  padding:10px;
+  border-radius: 10px;
+}
+
+
+input[type="submit"]{
+  border:none;
+  border-radius:5px;
+  width:50px;
+
+}
+
+textarea{
+  width:300px;
+  overflow:inherit;
+  padding:10px;
+  border-radius: 10px;
+}
