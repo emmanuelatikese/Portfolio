@@ -1,4 +1,16 @@
+@property --gradient-angle{
+  syntax: "<angle>";
+  initial-value:0deg;
+  inherits: false;
+}
 
+:root{
+  --clr-1:#052b2f;
+  --clr-2:#073438;
+  --clr-3:#0e4b50;
+  --clr-4:#2d8f85;
+  --clr-5:#637c54;
+}
 
 body {
   margin: 0;
@@ -186,6 +198,7 @@ h2{
   border: 2px solid black;
 }
 
+
 .skill-container{
   display: flex;
   flex-direction: row;
@@ -194,24 +207,52 @@ h2{
 
 }
 
+
+
 .skill-wrapper{
   
   width: 300px;
-  height: 100px;
+  height: 110px;
   padding:20px;
   border-radius: 8px;
-  border:2px solid #0984e3;
+  border:2px solid;
   cursor: pointer;
-  position:relative;
   display: flex;
   flex-wrap: wrap;
-  /* background-image: url('components/Images/ere.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  backdrop-filter: blur(8px); */
-  
+  /* background: #2c2c54; */
+  position:relative;
+
 }
 
+
+
+.skill-wrapper::before,.skill-wrapper::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset: -.5rem;
+  border-radius: inherit;
+  background: conic-gradient(
+  from var(--gradient-angle),
+  var(--clr-3),
+  var(--clr-4),
+  var(--clr-5),
+  var(--clr-3),
+  var(--clr-4)
+  );
+  border-radius:inherit;
+  animation: rotationAn 20s linear infinite;
+}
+
+
+.skill-wrapper::after{
+  filter:blur(3.5rem);
+}
+
+@keyframes rotationAn{
+  0%{--gradient-angle:0deg;}
+  100%{--gradient-angle:360deg;}
+}
 
 
 
@@ -220,7 +261,7 @@ h2{
 .icons-dev{
   width: 100px;
   height: 100px;
-  color:#0984e3;
+  color:white;
 }
 
 @font-face {
@@ -229,7 +270,7 @@ h2{
 }
 
 .skill-name{
-  color: #0984e3;
+  color: white;
   font-family: Elth;
   margin-left:8px;
   font-size: 15px;
@@ -237,7 +278,7 @@ h2{
 
 
 .Servicecontent{
-  color:#0984e3;
+  color:white;
   display: none;
 }
 

@@ -4,6 +4,7 @@ import {motion} from 'framer-motion'
 import Intro from './components/Intro';
 import About from './components/about';
 import Service from './components/service';
+import Contact from './components/contact'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
     </motion.div>
     <About/>
     <Service/>
+    <Contact/>
     </div>
   );
 }
